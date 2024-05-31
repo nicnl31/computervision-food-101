@@ -1,1 +1,3 @@
-# computervision-food-101
+# Computer Vision with the Food-101 Dataset
+
+This repository is where I store the results of Transfer Learning + Fine-tuning for the Food-101 Dataset. It provides experiments in training and validating three state-of-the-art computer vision architectures: Inception-ResNet-v2, MobileNetV3, and NASNet. Two phases of training are conducted: transfer learning and fine-tuning. The transfer learning phase takes said models with loaded pre-trained weights, replaces their head (i.e. the classifier) with a new head that is tailored to the number of classes for the target dataset, and trains its weights on a small portion of the target dataset, keeping the rest of the weights frozen. The fine-tuning phase then takes the best model in terms of validation loss, and gradually unfreezes more layers to tune to the specifics of the target dataset, where the full set will be used.
